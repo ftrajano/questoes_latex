@@ -1,0 +1,90 @@
+
+\documentclass[12pt]{report}
+
+%EndMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+\pretolerance=10000
+\baselineskip=9.in
+\evensidemargin 0.0 in
+\oddsidemargin 0.0 in
+\parindent 24pt
+\textheight 8.5 in
+\textwidth 6.5 in
+\topmargin -0.5 in
+\renewcommand{\baselinestretch}{1.18} %% Packages
+\usepackage{amssymb,amsthm,amsfonts,amsmath,pifont}
+\usepackage{enumerate}
+\usepackage[brazil]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{hyperref}
+\usepackage{dsfont}
+\usepackage{upgreek}
+\usepackage{graphicx}
+\usepackage{indentfirst}%1ª linha do capitulo em paragrafo%
+\setcounter{MaxMatrixCols}{30}
+\usepackage{color}
+\usepackage{float}
+
+%\usepackage[applemac]{inputenc}
+%\usepackage[portuges,brazilian]{babel}
+%\usepackage[T1]{fontenc}
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{figure}[ht]
+\hspace{0.5cm}
+\begin{minipage}[b]{0.11\linewidth}
+\centering
+\includegraphics[width=1.5cm]{logoufpe.jpg}
+\end{minipage}
+\hspace{0.5cm}
+\begin{minipage}[b]{0.75\linewidth}
+\centering
+\large\textbf{Universidade Federal de Pernambuco}\\
+Centro Acad\^emico do Agreste	\\
+N\'ucleo de Forma\c{c}\~ao Docente\\
+\end{minipage}
+\end{figure}
+Professor: \textbf{Felipe Trajano}
+\vspace{0.2cm}
+
+Aluno: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Nota: \_\_\_\_\_\_\_\_\_\_\_\_
+\vspace{0.2cm}
+\begin{center}
+\textbf{Avalia\c{c}\~ao}
+\end{center}
+
+
+\vspace{0.2cm}
+\normalsize
+
+\begin{enumerate}
+
+%-----------------PRIMEIRA QUESTÌO-----------------------------------------
+\item 
+\input{../questoes/q171-2018.tex}
+
+%------------------SEGUNDA QUESTÌO------------------------------------------
+\newpage
+\item 
+\input{../questoes/q172-2018.tex}
+
+%----------------TERCEIRA QUESTÌO--------------------------------------------
+\newpage
+\item 
+\input{../questoes/q163-2018.tex}
+
+%-----------------QUINTA QUESTÌO-----------------------------------------------
+\newpage
+\item     
+\input{../questoes/q169-2018.tex}
+
+%----------------QUARTA QUESTÌO---------------------------------------------
+\newpage
+\item 
+\input{../questoes/q170-2018.tex}
+
+\end{enumerate}
+\end{document}
+
