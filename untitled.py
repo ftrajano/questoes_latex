@@ -2,11 +2,26 @@ import os
 import random
 import subprocess
 
-path_questoes=os.path.join(os.getcwd(),"questoes/conjuntos")
+import argparse
+
+# ############ ARGPARSE ####################
+# ap = argparse.ArgumentParser()
+# ap.add_argument('-q', '--questoes', required=True, help='Endereco da pasta de questoes')
+# args = vars(ap.parse_args())
+
+# path = args['questoes']
+
+
+
+#path_questoes=os.path.join(os.getcwd(),"questoes/conjuntos")
+#path_questoes=os.path.join(os.getcwd(),"questoes/exame12")
+path_questoes=os.path.join(os.getcwd(),"questoes/funcao_exponencial")
+print("Endereco completo das questos:", path_questoes)
+print('')
 lista=os.listdir(path_questoes)
-
+print('lista de questoes(texto):', lista)
 questoes_sorteadas=[lista[i] for i in random.sample(range(len(lista)),5)]
-
+print('questoes sorteadas', questoes_sorteadas)
 
 content=r'''
 \documentclass[12pt]{{report}}
@@ -21,11 +36,13 @@ content=r'''
 \textheight 8.5 in
 \textwidth 6.5 in
 \topmargin -0.5 in
-\renewcommand{{\baselinestretch}}{{1.18}} %% Packages
+\renewcommand{{\baselinestretch}}{{1.18}} 
+
+%% Packages
 \usepackage{{amssymb,amsthm,amsfonts,amsmath,pifont}}
 \usepackage{{enumerate}}
 \usepackage[brazil]{{babel}}
-\usepackage[latin1]{{inputenc}}
+\usepackage[utf8]{{inputenc}}
 \usepackage{{hyperref}}
 \usepackage{{dsfont}}
 \usepackage{{upgreek}}
@@ -95,7 +112,12 @@ OBS.: Apenas respostas justificadas ser\~ao consideradas.
 \end{{enumerate}}
 \end{{document}}
 
-'''.format(questoes_sorteadas[0],questoes_sorteadas[1],questoes_sorteadas[2],questoes_sorteadas[3],questoes_sorteadas[4])
+'''.format(os.path.join(path_questoes,questoes_sorteadas[0]),
+		   os.path.join(path_questoes,questoes_sorteadas[1]),
+			os.path.join(path_questoes,questoes_sorteadas[2]),
+			os.path.join(path_questoes,questoes_sorteadas[3]),
+			os.path.join(path_questoes,questoes_sorteadas[4]))
+
 with open('teste.tex', 'w') as f:
 	f.write(content)
 
